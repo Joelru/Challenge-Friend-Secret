@@ -18,3 +18,14 @@ function mostrarLista() {
 
 }
 
+function uptdateList() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; // Limpiar la lista antes de actualizar
+
+    amigos.forEach((amigo, index) => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        li.setAttribute("data-index", index);
+        lista.appendChild(li);
+    });
+}
